@@ -17,10 +17,10 @@ fi
 
 IFACE="eth0"
 
-## download - inbound in MiB
+## Receive/download TO this server - inbound in MiB
 total_rx=$(vnstat --dumpdb -i $IFACE | grep 'totalrx;' | cut -d';' -f2)
 
-## upload - outbound in MiB
+## Transmit/upload FROM this server - outbound in MiB
 total_tx=$(vnstat --dumpdb -i $IFACE | grep 'totaltx;' | cut -d';' -f2)
 
 
